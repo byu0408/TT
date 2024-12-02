@@ -1,0 +1,148 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f3f3, #e3e3e3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 헤더 */
+header {
+    text-align: center;
+    padding: 20px 0;
+    color: #333;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 컨테이너 */
+.container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 업로드 섹션 */
+#drop-area {
+    border: 2px dashed #6a11cb;
+    padding: 30px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#drop-area:hover {
+    background-color: #eaeaea;
+}
+
+#file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.upload-link {
+    color: #6a11cb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 시각화 섹션 */
+.visualization-section {
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instrument-visualization {
+    margin-bottom: 20px;
+}
+
+.notes-container {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 개별 노트 */
+.note {
+    position: absolute;
+    bottom: 0;
+    background-color: #6a11cb;
+    border-radius: 2px;
+    animation: moveNote 5s linear infinite;
+}
+
+@keyframes moveNote {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* 다운로드 영역 */
+.download-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 공통 버튼 스타일 */
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 to MIDI Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MP3 to MIDI Converter</h1>
+    </header>
+
+    <main class="container">
+        <!-- 업로드 섹션 -->
+        <section id="drop-area">
+            <p id="file-name">Drag & Drop your MP3/MIDI file here or <span class="upload-link">Click to Upload</span></p>
+            <input type="file" id="file-input" accept=".mp3, .midi" hidden>
+        </section>
+
+        <button id="convert-button" class="action-button">Convert to MIDI</button>
+
+        <!-- 악기 시각화 섹션 -->
+        <section class="visualization-section">
+            <h2>Instrument Visualizations</h2>
+            <div class="instrument-visualization">
+                <h3>Piano</h3>
+                <div class="notes-container" id="piano-visualization"></div>
+            </div>
+            <div class="instrument-visualization">
+                <h3>Guitar</h3>
+                <div class="notes-container" id="guitar-visualization"></div>
+            </div>
+            <div class="instrument-visualization">
+                <h3>Bass</h3>
+                <div class="notes-container" id="bass-visualization"></div>
+            </div>
+        </section>
+
+        <!-- 다운로드 섹션 -->
+        <section class="download-section">
+            <h2>Download</h2>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="download-piano-checkbox"> Piano
+                </label>
+                <label>
+                    <input type="checkbox" id="download-guitar-checkbox"> Guitar
+                </label>
+                <label>
+                    <input type="checkbox" id="download-bass-checkbox"> Bass
+                </label>
+            </div>
+            <button class="action-button" id="download-mp3">Download MP3</button>
+            <button class="action-button" id="download-midi">Download MIDI</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
